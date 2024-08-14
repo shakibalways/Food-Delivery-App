@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_drawer.dart';
+import 'package:food_delivery_app/components/my_sliver_app_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,25 +13,29 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Home",
-          style: TextStyle(
-            color: Theme.of(context).colorScheme.inversePrimary,
-          ),
-        ),
-        centerTitle: true,
-      ),
       drawer: const MyDrawer(),
-      body: Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image.asset(
-            "images/bloody-mary-cocktail-with-lemon-green-olives-tomato-sauce.jpg",
-            height: 200,
-            width: 200,
-            fit: BoxFit.fitHeight,
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          MySliverAppBar(
+            title:  const Text("title"),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Divider(
+                  endIndent: 20,
+                  indent: 25,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                //my current location
+
+                // discription box
+              ],
+            ),
+
           ),
+        ],
+        body: Container(
+          color: Colors.blue,
         ),
       ),
     );
