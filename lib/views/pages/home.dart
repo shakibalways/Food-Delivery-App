@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/components/my_current_location.dart';
+import 'package:food_delivery_app/components/my_discription_box.dart';
 import 'package:food_delivery_app/components/my_drawer.dart';
+import 'package:food_delivery_app/components/my_foods_tile.dart';
 import 'package:food_delivery_app/components/my_sliver_app_bar.dart';
+import 'package:food_delivery_app/components/my_tab_bar.dart';
+import 'package:food_delivery_app/models/foods.dart';
+import 'package:food_delivery_app/models/restaurant.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -9,7 +16,48 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  @override
+  void initState() {
+    _tabController =
+        TabController(length: FoodCategory.values.length, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  // sort out and return a list of food items that belong to a specific category
+
+  List<Foods> filterMenuByCategory(
+      FoodCategory category, List<Foods> fullMenu) {
+    return fullMenu.where((food) => food.category == category).toList();
+  }
+
+  // return  of list foods in given category
+  List<Widget> getFoodInThisCategory(List<Foods> fullMenu) {
+    return FoodCategory.values.map((category) {
+      // get category menu
+      List<Foods> categoryMenu = filterMenuByCategory(category, fullMenu);
+      return ListView.builder(
+        itemCount: categoryMenu.length,
+        physics: const NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
+        itemBuilder: (context, index) {
+          final food = categoryMenu[index];
+          return MyFoodsTile(
+            foods: food,
+            onTap: () {},
+          );
+        },
+      );
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +65,9 @@ class _HomeState extends State<Home> {
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           MySliverAppBar(
-            title:  const Text("title"),
+            title: MyTabBar(
+              tabController: _tabController,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -27,15 +77,18 @@ class _HomeState extends State<Home> {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
                 //my current location
-
+                MyCurrentLocation(),
                 // discription box
+                const MyDiscriptionBox(),
               ],
             ),
-
           ),
         ],
-        body: Container(
-          color: Colors.blue,
+        body: Consumer<Restaurant>(
+          builder: (context, restaurant, child) => TabBarView(
+            controller: _tabController,
+            children: getFoodInThisCategory(restaurant.menu),
+          ),
         ),
       ),
     );
