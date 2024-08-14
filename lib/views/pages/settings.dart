@@ -1,6 +1,3 @@
-
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/theme/theme_provider.dart';
@@ -55,7 +52,6 @@ class _SettingsState extends State<Settings> {
                     onChanged: (value) {
                       setState(
                         () {
-                          log('=============');
                           Provider.of<ThemeProvider>(context, listen: false)
                               .toggleTheme();
                         },
