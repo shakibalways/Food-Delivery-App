@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/auth/login_or_register/login_or_register.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
+
 import 'package:food_delivery_app/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+
 void main() {
+
   runApp(
     MultiProvider(
       providers: [

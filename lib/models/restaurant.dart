@@ -10,7 +10,7 @@ class Restaurant extends ChangeNotifier {
       name: "Fresh Ingredients ",
       discription:
           "A juicy beef patty with melted cheddar, lettuce, tomato, and a hint of onion and pickle",
-      imagePath: "assets/images/burgers/fresh-ingredients.png",
+      imagePath: "assets/images/burger/delicious-burgers-with-bright-lights.jpg",
       price: 8.99,
       category: FoodCategory.burgers,
       availableAddon: [
@@ -23,7 +23,7 @@ class Restaurant extends ChangeNotifier {
       name: "Beef Meat ",
       discription:
           "A juicy beef patty with melted cheddar, lettuce, tomato, and a hint of onion and pickle",
-      imagePath: "assets/images/burgers/beef-meat.png",
+      imagePath: "assets/images/burger/delicious-burgers-with-bright-lights (1).jpg",
       price: 10.89,
       category: FoodCategory.burgers,
       availableAddon: [
@@ -36,7 +36,7 @@ class Restaurant extends ChangeNotifier {
       name: "Burger Meal ",
       discription:
           "A juicy beef patty with melted cheddar, lettuce, tomato, and a hint of onion and pickle",
-      imagePath: "assets/images/burgers/burger-meal-.png",
+      imagePath: "assets/images/burger/delicious-looking-3d-burger-with-simple-background.jpg",
       price: 8.39,
       category: FoodCategory.burgers,
       availableAddon: [
@@ -49,7 +49,7 @@ class Restaurant extends ChangeNotifier {
       name: "Looking Burger ",
       discription:
           "A juicy beef patty with melted cheddar, lettuce, tomato, and a hint of onion and pickle",
-      imagePath: "assets/images/burgers/looking-burger-.png",
+      imagePath: "assets/images/burger/view-delicious-burger-with-buns-cheese.jpg",
       price: 5.29,
       category: FoodCategory.burgers,
       availableAddon: [
@@ -62,7 +62,7 @@ class Restaurant extends ChangeNotifier {
       name: "Chess Tomato ",
       discription:
           "A juicy beef patty with melted cheddar, lettuce, tomato, and a hint of onion and pickle",
-      imagePath: "assets/images/burgers/fries-cheese-tomato-.png",
+      imagePath: "assets/images/burger/view-tasty-burger-with-cheese-meat.jpg",
       price: 7.69,
       category: FoodCategory.burgers,
       availableAddon: [
@@ -77,7 +77,7 @@ class Restaurant extends ChangeNotifier {
       name: 'Mojito',
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/desserts/delicious-cake.png",
+      imagePath: "assets/images/dessert/ai-generated-cake-picture.jpg",
       price: 20.08,
       category: FoodCategory.desserts,
       availableAddon: [
@@ -90,7 +90,7 @@ class Restaurant extends ChangeNotifier {
       name: 'Cake',
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/desserts/cake.png",
+      imagePath: "assets/images/dessert/delicious-cupcakes-with-fruits.jpg",
       price: 17.18,
       category: FoodCategory.desserts,
       availableAddon: [
@@ -103,7 +103,7 @@ class Restaurant extends ChangeNotifier {
       name: 'Cake Fruits',
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/desserts/delicious-cake-fruits.png",
+      imagePath: "assets/images/dessert/view-plate-filled-with-delicious-sweet-cupcake-desserts.jpg",
       price: 15.89,
       category: FoodCategory.desserts,
       availableAddon: [
@@ -116,7 +116,7 @@ class Restaurant extends ChangeNotifier {
       name: 'Strawberry',
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/desserts/delicious-cake-with-fruits.png",
+      imagePath: "assets/images/dessert/view-plate-with-delicious-sweet-cupcake-dessert.jpg",
       price: 11.29,
       category: FoodCategory.desserts,
       availableAddon: [
@@ -129,7 +129,7 @@ class Restaurant extends ChangeNotifier {
       name: 'Delicious Desserts',
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/desserts/delicious-dessert.png",
+      imagePath: "assets/images/dessert/view-plate-with-delicious-sweet-cupcake-dessert (1).jpg",
       price: 13.39,
       category: FoodCategory.desserts,
       availableAddon: [
@@ -144,7 +144,7 @@ class Restaurant extends ChangeNotifier {
       name: "Lemon Green",
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/drinks/lemon-green.png",
+      imagePath: "assets/images/drink/bar-with-different-cocktails-including-cocktail-cocktail-glass-white-liquid.jpg",
       price: 12.80,
       category: FoodCategory.drinks,
       availableAddon: [
@@ -157,7 +157,7 @@ class Restaurant extends ChangeNotifier {
       name: "Strawberry",
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/drinks/strawberry.png",
+      imagePath: "assets/images/drink/glass-juice-with-drink-it.jpg",
       price: 12.80,
       category: FoodCategory.drinks,
       availableAddon: [
@@ -170,7 +170,7 @@ class Restaurant extends ChangeNotifier {
       name: "Apple Drinks",
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/drinks/drinks.png",
+      imagePath: "assets/images/drink/glass-orange-cocktail-with-straw-lemon-slice-rim.jpg",
       price: 12.80,
       category: FoodCategory.drinks,
       availableAddon: [
@@ -183,7 +183,7 @@ class Restaurant extends ChangeNotifier {
       name: "Cocktail",
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/drinks/cocktail.png",
+      imagePath: "assets/images/drink/glass-orange-juice-with-slice-lemon-side.jpg",
       price: 12.80,
       category: FoodCategory.drinks,
       availableAddon: [
@@ -196,7 +196,7 @@ class Restaurant extends ChangeNotifier {
       name: "Alcoholic Drinks",
       discription:
           "A Classic Cuban cocktail with muddled line and mint, sweetened and sugar.",
-      imagePath: "assets/images/drinks/alcoholic-drinks.png",
+      imagePath: "assets/images/drink/two-cocktails-table-one-which-has-blue-green-liquid-it.jpg",
       price: 12.80,
       category: FoodCategory.drinks,
       availableAddon: [
@@ -211,7 +211,7 @@ class Restaurant extends ChangeNotifier {
       name: "Caesar salad",
       discription:
           "A salad is a dish consisting of mixed ingredients, frequently vegetables",
-      imagePath: "assets/images/salads/salads.png",
+      imagePath: "assets/images/salad/colorful-bowl-salad-with-tomatoes-cucumbers-side.jpg",
       price: 5.80,
       category: FoodCategory.salads,
       availableAddon: [
@@ -224,7 +224,7 @@ class Restaurant extends ChangeNotifier {
       name: "Greek salad",
       discription:
           "A salad is a dish consisting of mixed ingredients, frequently vegetables",
-      imagePath: "assets/images/salads/saladss(1).png",
+      imagePath: "assets/images/salad/delicious-salad-studio.jpg",
       price: 5.80,
       category: FoodCategory.salads,
       availableAddon: [
@@ -237,7 +237,7 @@ class Restaurant extends ChangeNotifier {
       name: "Fruit salad",
       discription:
           "A salad is a dish consisting of mixed ingredients, frequently vegetables",
-      imagePath: "assets/images/salads/salads(2).png",
+      imagePath: "assets/images/salad/healthy-hearty-salad-tuna-green-beans-tomatoes-eggs-potatoes-black-olives-close-up-bowl-table.jpg",
       price: 5.80,
       category: FoodCategory.salads,
       availableAddon: [
@@ -250,7 +250,7 @@ class Restaurant extends ChangeNotifier {
       name: "Croutons",
       discription:
           "A salad is a dish consisting of mixed ingredients, frequently vegetables",
-      imagePath: "assets/images/salads/salads(3).png",
+      imagePath: "assets/images/salad/salad-from-tomatoes-cucumber-red-onions-lettuce-leaves-healthy-summer-vitamin-menu-vegan-vegetable-food-vegetarian-dinner-table.jpg",
       price: 5.80,
       category: FoodCategory.salads,
       availableAddon: [
@@ -263,7 +263,7 @@ class Restaurant extends ChangeNotifier {
       name: "Potato salad",
       discription:
           "A salad is a dish consisting of mixed ingredients, frequently vegetables",
-      imagePath: "assets/images/salads/salads(4).png",
+      imagePath: "assets/images/salad/top-view-delicious-salad-table.jpg",
       price: 5.80,
       category: FoodCategory.salads,
       availableAddon: [
@@ -278,7 +278,7 @@ class Restaurant extends ChangeNotifier {
       name: "Applesauce",
       discription:
           "A side dish, sometimes referred to as a side order, side item, or simply a side",
-      imagePath: "assets/images/sides/sides.png",
+      imagePath: "assets/images/side/chinese-new-year-reunion-dinner-scene-with-delicious-food.jpg",
       price: 5.89,
       category: FoodCategory.sides,
       availableAddon: [
@@ -291,7 +291,7 @@ class Restaurant extends ChangeNotifier {
       name: "Asparagus",
       discription:
           "A side dish, sometimes referred to as a side order, side item, or simply a side",
-      imagePath: "assets/images/sides/sides(1).png",
+      imagePath: "assets/images/side/close-up-appetizing-ramadan-meal.jpg",
       price: 5.89,
       category: FoodCategory.sides,
       availableAddon: [
@@ -304,7 +304,7 @@ class Restaurant extends ChangeNotifier {
       name: "Broccoli",
       discription:
           "A side dish, sometimes referred to as a side order, side item, or simply a side",
-      imagePath: "assets/images/sides/sides(2).png",
+      imagePath: "assets/images/side/fresh-gourmet-vegetarian-meal-with-grilled-tomato-bell-pepper-generated-by-artificial-intelligence.jpg",
       price: 5.89,
       category: FoodCategory.sides,
       availableAddon: [
@@ -317,7 +317,7 @@ class Restaurant extends ChangeNotifier {
       name: "Cauliflower",
       discription:
           "A side dish, sometimes referred to as a side order, side item, or simply a side",
-      imagePath: "assets/images/sides/sides(3).png",
+      imagePath: "assets/images/side/top-view-delicious-food-table.jpg",
       price: 5.89,
       category: FoodCategory.sides,
       availableAddon: [
@@ -330,7 +330,7 @@ class Restaurant extends ChangeNotifier {
       name: "Coleslaw",
       discription:
           "A side dish, sometimes referred to as a side order, side item, or simply a side",
-      imagePath: "assets/images/sides/sides(4).png",
+      imagePath: "assets/images/side/top-view-delicious-fries-table.jpg",
       price: 5.89,
       category: FoodCategory.sides,
       availableAddon: [
