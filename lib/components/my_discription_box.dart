@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class MyDiscriptionBox extends StatelessWidget {
@@ -7,8 +7,8 @@ class MyDiscriptionBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25),
-      margin: EdgeInsets.only(left: 25,right: 25,bottom: 25),
+      padding: const EdgeInsets.all(25),
+      margin: const EdgeInsets.only(left: 25,right: 25,bottom: 25),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         border: Border.all(

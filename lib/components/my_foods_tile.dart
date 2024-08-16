@@ -60,7 +60,7 @@ class _MyFoodsTileState extends State<MyFoodsTile> {
                     ],
                   ),
                 ),
-                  SizedBox(width: 15,),
+                  const SizedBox(width: 15,),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
                     child: Image.asset(

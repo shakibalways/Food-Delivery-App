@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/views/pages/cart_page.dart';
 
 class MySliverAppBar extends StatelessWidget {
   final Widget child;
@@ -17,10 +17,22 @@ class MySliverAppBar extends StatelessWidget {
       collapsedHeight: 120,
       floating: false,
       pinned: true, // app not hide for sliverAppBar
-      actions: const [
+      actions: [
         Padding(
-          padding: EdgeInsets.only(right: 10),
-          child: Icon(Icons.shopping_cart),
+          padding: const EdgeInsets.only(right: 10),
+          child: IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Cart(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+            ),
+          ),
         )
       ],
       backgroundColor: Theme.of(context).colorScheme.background,

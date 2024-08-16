@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
 import 'package:food_delivery_app/models/foods.dart';
+import 'package:food_delivery_app/models/restaurant.dart';
+import 'package:provider/provider.dart';
 
 class FoodDetails extends StatefulWidget {
   final Foods foods;
   final Map<Addon, bool> selectAddon = {};
-  FoodDetails({super.key, required this.foods}) {
+
+  FoodDetails({
+    super.key,
+    required this.foods,
+  }) {
     for (Addon addon in foods.availableAddon) {
       selectAddon[addon] = false;
     }
@@ -16,6 +22,19 @@ class FoodDetails extends StatefulWidget {
 }
 
 class _FoodDetailsState extends State<FoodDetails> {
+  // method add to the cart
+  void addToCart(Foods foods, Map<Addon,bool> selectAddon){
+    // close the current food page to go back to menu
+    Navigator.pop(context);
+
+    List<Addon> currentSelectedAddons =[];
+    for(Addon addon in foods.availableAddon){
+      if(widget.selectAddon[addon] == true){
+        currentSelectedAddons.add(addon);
+      }
+    }
+    context.read<Restaurant>().addToCart(foods, currentSelectedAddons);
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -118,7 +137,10 @@ class _FoodDetailsState extends State<FoodDetails> {
                   height: 30,
                 ),
 
-                MyButton(onTap: () {}, text: "Add To Cart"),
+                MyButton(
+                  onTap: () =>addToCart(widget.foods, widget.selectAddon),
+                  text: "Add To Cart",
+                ),
                 const SizedBox(
                   height: 25,
                 )
@@ -128,14 +150,12 @@ class _FoodDetailsState extends State<FoodDetails> {
         ),
         SafeArea(
           child: Opacity(
-            opacity: 0.6,
+            opacity: 0.7,
             child: Container(
-
               margin: const EdgeInsets.only(left: 25),
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Theme.of(context).colorScheme.secondary
-              ),
+                  color: Theme.of(context).colorScheme.secondary,
+                  shape: BoxShape.circle),
               child: IconButton(
                 icon: const Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
@@ -148,4 +168,5 @@ class _FoodDetailsState extends State<FoodDetails> {
       ],
     );
   }
+
 }
