@@ -21,7 +21,7 @@ class _MyFoodsTileState extends State<MyFoodsTile> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
       child: Column(
         children: [
           GestureDetector(
@@ -60,18 +60,24 @@ class _MyFoodsTileState extends State<MyFoodsTile> {
                     ],
                   ),
                 ),
+                  SizedBox(width: 15,),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
                       widget.foods.imagePath,
                       height: 120,
-                      width: 120,
+                      width: 115,
                       fit: BoxFit.fitHeight,
                     ),
                   ),
               ],
             ),
           ),
+          Divider(
+            color: Theme.of(context).colorScheme.tertiary,
+            indent: 5,
+            endIndent: 5,
+          )
         ],
       ),
     );
