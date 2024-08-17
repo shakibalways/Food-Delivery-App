@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:food_delivery_app/components/my_button.dart';
@@ -20,39 +19,50 @@ class _PaymentState extends State<Payment> {
   bool showBackView = false;
 
   // user wants to pay
-  void userTappedPay(){
-if(formKey.currentState!.validate()){
-  // only show dialog if from is valid
-  showDialog(context: context, builder: (context)=>AlertDialog(
-title: const Text("Confirm Payment"),
-    content: SingleChildScrollView(
-      child: ListBody(
-        children: [
-          Text("CardNumber: $cardNumber"),
-          Text("Expiry Date: $expiryDate"),
-          Text("Card Holder Name: $cardHolderName"),
-          Text("Cvv Code: $cvvCode"),
+  void userTappedPay() {
+    if (formKey.currentState!.validate()) {
+      // only show dialog if from is valid
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text("Confirm Payment"),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                Text("CardNumber: $cardNumber"),
+                Text("Expiry Date: $expiryDate"),
+                Text("Card Holder Name: $cardHolderName"),
+                Text("Cvv Code: $cvvCode"),
+              ],
+            ),
+          ),
+          actions: [
+            // yes button
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DeliveryProgress(),
+                  ),
+                );
+              },
+              child: const Text("Yes"),
+            ),
 
-        ],
-      ),
-    ),
-
-    actions: [
-      // yes button
-      TextButton(onPressed: (){
-
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> const DeliveryProgress(),),);
-      }, child: const Text("Yes"),),
-
-      //cancel button
-      TextButton(onPressed: (){
-        Navigator.pop(context);
-      }, child: const Text("Cancel"),),
-    ],
-
-  ),);
-}
+            //cancel button
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text("Cancel"),
+            ),
+          ],
+        ),
+      );
+    }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,38 +88,41 @@ title: const Text("Confirm Payment"),
           // credit card form
           Expanded(
             child: SingleChildScrollView(
-                child: Stack(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CreditCardForm(
-                      cardNumber: cardNumber,
-                      expiryDate: expiryDate,
-                      cardHolderName: cardHolderName,
-                      cvvCode: cvvCode,
-                      onCreditCardModelChange: (data) {
-                        setState(() {
-                          cardNumber = data.cardNumber;
-                          expiryDate = data.expiryDate;
-                          cardHolderName = data.cardHolderName;
-                          cvvCode = data.cvvCode;
-                        });
-                      },
-                      formKey: formKey,
-                    ),
-
-                    const SizedBox(height: 220,),
-
-                    MyButton(onTap: userTappedPay, text: "Pay Now")
-                  ],
-                ),
-
-              ],
-            )),
+              child: Stack(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CreditCardForm(
+                        cardNumber: cardNumber,
+                        expiryDate: expiryDate,
+                        cardHolderName: cardHolderName,
+                        cvvCode: cvvCode,
+                        onCreditCardModelChange: (data) {
+                          setState(
+                            () {
+                              cardNumber = data.cardNumber;
+                              expiryDate = data.expiryDate;
+                              cardHolderName = data.cardHolderName;
+                              cvvCode = data.cvvCode;
+                            },
+                          );
+                        },
+                        formKey: formKey,
+                      ),
+                      const SizedBox(
+                        height: 220,
+                      ),
+                      MyButton(onTap: userTappedPay, text: "Pay Now")
+                    ],
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+

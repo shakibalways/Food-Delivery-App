@@ -3,6 +3,7 @@ import 'package:food_delivery_app/components/my_button.dart';
 import 'package:food_delivery_app/components/my_cart_title.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:food_delivery_app/views/pages/payment.dart';
+
 import 'package:provider/provider.dart';
 
 class Cart extends StatelessWidget {
@@ -27,7 +28,7 @@ class Cart extends StatelessWidget {
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Text("Are your sure you want to clear the cart?"),
+                      title: const Text("Are your sure you want to clear the cart?"),
                       actions: [
                         // yes button
                         TextButton(
@@ -35,20 +36,20 @@ class Cart extends StatelessWidget {
                             Navigator.pop(context);
                             restaurant.clearCart();
                           },
-                          child: Text("Yes"),
+                          child: const Text("Yes"),
                         ),
                         // cancel button
                         TextButton(
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: Text("Cancel"),
+                          child: const Text("Cancel"),
                         ),
                       ],
                     ),
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.delete,
                 ),
               ),
@@ -89,13 +90,13 @@ class Cart extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Payment(),
+                      builder: (context) => const Payment(),
                     ),
                   );
                 },
                 text: "Go to checkout",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
