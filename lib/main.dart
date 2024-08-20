@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/auth/login_or_register/login_or_register.dart';
+
 import 'package:food_delivery_app/models/restaurant.dart';
 
 import 'package:food_delivery_app/theme/theme_provider.dart';
+import 'package:food_delivery_app/views/pages/splash/splash.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,9 +26,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const LoginOrRegister(),
+      home: const Splash(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

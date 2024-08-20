@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
-import 'package:food_delivery_app/components/my_cart_title.dart';
+import 'package:food_delivery_app/views/pages/cart/widgets/my_cart_title.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
-import 'package:food_delivery_app/views/pages/payment.dart';
+import 'package:food_delivery_app/views/pages/payment/payment.dart';
 
 import 'package:provider/provider.dart';
 
@@ -28,7 +28,8 @@ class Cart extends StatelessWidget {
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: const Text("Are your sure you want to clear the cart?"),
+                      title: const Text(
+                          "Are your sure you want to clear the cart?"),
                       actions: [
                         // yes button
                         TextButton(

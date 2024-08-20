@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/auth/login/login.dart';
-import 'package:food_delivery_app/auth/register/register.dart';
+
+import 'package:food_delivery_app/views/pages/auth/login/login.dart';
+import 'package:food_delivery_app/views/pages/auth/register/register.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});

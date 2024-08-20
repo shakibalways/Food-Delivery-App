@@ -2,10 +2,9 @@ class Foods {
   final String name;
   final String discription;
   final String imagePath;
-  final double price;           // 4.99
+  final double price; // 4.99
   final FoodCategory category;
   List<Addon> availableAddon; //[extra chess, sauce,extra patty ]
-
 
   Foods({
     required this.name,

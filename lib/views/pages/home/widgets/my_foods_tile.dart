@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/foods.dart';
 
@@ -17,11 +16,12 @@ class MyFoodsTile extends StatefulWidget {
 }
 
 class _MyFoodsTileState extends State<MyFoodsTile> {
+  bool isLoading = true;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Column(
         children: [
           GestureDetector(
@@ -60,16 +60,19 @@ class _MyFoodsTileState extends State<MyFoodsTile> {
                     ],
                   ),
                 ),
-                  const SizedBox(width: 15,),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Image.asset(
-                      widget.foods.imagePath,
-                      height: 120,
-                      width: 115,
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ),
+                const SizedBox(
+                  width: 15,
+                ),
+                     ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.asset(
+                          widget.foods.imagePath,
+                          height: 120,
+                          width: 115,
+                          fit: BoxFit.fitHeight,
+                        ),
+                      ),
+
               ],
             ),
           ),

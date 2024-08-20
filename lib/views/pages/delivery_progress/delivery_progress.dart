@@ -94,8 +94,6 @@ class DeliveryProgress extends StatelessWidget {
               ),
             ],
           ),
-
-
         ],
       ),
     );

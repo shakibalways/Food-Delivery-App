@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/components/my_current_location.dart';
-import 'package:food_delivery_app/components/my_discription_box.dart';
-import 'package:food_delivery_app/components/my_drawer.dart';
-import 'package:food_delivery_app/components/my_foods_tile.dart';
-import 'package:food_delivery_app/components/my_sliver_app_bar.dart';
-import 'package:food_delivery_app/components/my_tab_bar.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_current_location.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_discription_box.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_drawer.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_foods_tile.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_sliver_app_bar.dart';
+import 'package:food_delivery_app/views/pages/home/widgets/my_tab_bar.dart';
 import 'package:food_delivery_app/models/foods.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
-import 'package:food_delivery_app/views/pages/food_details.dart';
+import 'package:food_delivery_app/views/pages/food_details/food_details.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
