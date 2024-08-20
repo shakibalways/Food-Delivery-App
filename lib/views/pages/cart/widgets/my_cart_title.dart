@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/components/my_quantity_selector.dart';
 import 'package:food_delivery_app/models/cart_item.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:provider/provider.dart';
+
+import 'my_quantity_selector.dart';
 
 class MyCartTitle extends StatelessWidget {
   final CartItem cartItem;
@@ -84,32 +85,32 @@ class MyCartTitle extends StatelessWidget {
                 children: cartItem.selectAddons
                     .map(
                       (addon) => Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: FilterChip(
-                          label: Row(
-                            children: [
-                              // addon name
-                              Text(addon.name),
-                              //addon price
-                              Text(
-                                "  (\$${addon.price.toString()})",
-                              ),
-                            ],
+                    padding: const EdgeInsets.only(right: 8),
+                    child: FilterChip(
+                      label: Row(
+                        children: [
+                          // addon name
+                          Text(addon.name),
+                          //addon price
+                          Text(
+                            "  (\$${addon.price.toString()})",
                           ),
-                          shape: StadiumBorder(
-                            side: BorderSide(
-                              color: Theme.of(context).colorScheme.primary,
-                            ),
-                          ),
-                          onSelected: (value) {},
-                          backgroundColor:
-                              Theme.of(context).colorScheme.secondary,
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).colorScheme.inversePrimary,
-                          ),
+                        ],
+                      ),
+                      shape: StadiumBorder(
+                        side: BorderSide(
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
-                    )
+                      onSelected: (value) {},
+                      backgroundColor:
+                      Theme.of(context).colorScheme.secondary,
+                      labelStyle: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      ),
+                    ),
+                  ),
+                )
                     .toList(),
               ),
             ),

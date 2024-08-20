@@ -25,7 +25,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         TabController(length: FoodCategory.values.length, vsync: this);
     super.initState();
   }
-
   @override
   void dispose() {
     _tabController.dispose();

@@ -63,15 +63,15 @@ class _MyFoodsTileState extends State<MyFoodsTile> {
                 const SizedBox(
                   width: 15,
                 ),
-                     ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Image.asset(
-                          widget.foods.imagePath,
-                          height: 120,
-                          width: 115,
-                          fit: BoxFit.fitHeight,
-                        ),
-                      ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    widget.foods.imagePath,
+                    height: 120,
+                    width: 115,
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
 
               ],
             ),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,7 +11,6 @@ GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
-
     super.dispose();
     emailController.dispose();
     passwordController.dispose();

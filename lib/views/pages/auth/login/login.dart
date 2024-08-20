@@ -84,7 +84,7 @@ class Login extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (c) => const Home(),
+                              builder: (c) =>  const Home(),
                             ),
                           );
                           controller.isLoading.value = false;

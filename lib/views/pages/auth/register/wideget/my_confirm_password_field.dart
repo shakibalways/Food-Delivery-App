@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -46,7 +44,7 @@ class MyConfirmPasswordField extends StatelessWidget {
         validator:(value) {
           if (value == null || value == '') {
             return "confirm_pass_error".tr;
-          } else if (value.toString() != null) {
+          } else if (value.toString() != "") {
             return "pass_did_not_match_error".tr;
           }
           return null;

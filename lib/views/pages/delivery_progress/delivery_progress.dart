@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/components/my_receipt.dart';
+import 'package:food_delivery_app/views/pages/delivery_progress/my_receipt.dart';
 
 class DeliveryProgress extends StatelessWidget {
   const DeliveryProgress({super.key});
@@ -12,10 +12,12 @@ class DeliveryProgress extends StatelessWidget {
         title: const Text("Delivery in progress...."),
       ),
       bottomNavigationBar: buildBottomNavBar(context),
-      body: const Column(
-        children: [
-          MyReceipt(),
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            MyReceipt(),
+          ],
+        ),
       ),
     );
   }

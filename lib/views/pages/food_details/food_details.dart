@@ -103,7 +103,7 @@ class _FoodDetailsState extends State<FoodDetails> {
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
                                 color:
-                                    Theme.of(context).colorScheme.secondary)),
+                                Theme.of(context).colorScheme.secondary)),
                         child: ListView.builder(
                           shrinkWrap: true,
                           padding: EdgeInsets.zero,

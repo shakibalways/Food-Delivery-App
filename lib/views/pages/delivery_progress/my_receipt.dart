@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:provider/provider.dart';

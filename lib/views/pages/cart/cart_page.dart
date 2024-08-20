@@ -63,26 +63,26 @@ class Cart extends StatelessWidget {
                   children: [
                     userCart.isEmpty
                         ? const Expanded(
-                            child: Center(
-                              child: Text(
-                                "Cart is empty...",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                          )
-                        : Expanded(
-                            child: ListView.builder(
-                              itemCount: userCart.length,
-                              itemBuilder: (context, index) {
-                                final cartItem = userCart[index];
-                                return MyCartTitle(
-                                  cartItem: cartItem,
-                                );
-                              },
-                            ),
+                      child: Center(
+                        child: Text(
+                          "Cart is empty...",
+                          style: TextStyle(
+                            fontSize: 20,
                           ),
+                        ),
+                      ),
+                    )
+                        : Expanded(
+                      child: ListView.builder(
+                        itemCount: userCart.length,
+                        itemBuilder: (context, index) {
+                          final cartItem = userCart[index];
+                          return MyCartTitle(
+                            cartItem: cartItem,
+                          );
+                        },
+                      ),
+                    ),
                   ],
                 ),
               ),

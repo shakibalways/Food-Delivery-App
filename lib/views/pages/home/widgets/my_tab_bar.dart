@@ -19,7 +19,7 @@ class MyTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: TabBar(
         dividerColor: Theme.of(context).colorScheme.secondary,
         controller: tabController,
