@@ -23,18 +23,19 @@ class FoodDetails extends StatefulWidget {
 
 class _FoodDetailsState extends State<FoodDetails> {
   // method add to the cart
-  void addToCart(Foods foods, Map<Addon,bool> selectAddon){
+  void addToCart(Foods foods, Map<Addon, bool> selectAddon) {
     // close the current food page to go back to menu
     Navigator.pop(context);
 
-    List<Addon> currentSelectedAddons =[];
-    for(Addon addon in foods.availableAddon){
-      if(widget.selectAddon[addon] == true){
+    List<Addon> currentSelectedAddons = [];
+    for (Addon addon in foods.availableAddon) {
+      if (widget.selectAddon[addon] == true) {
         currentSelectedAddons.add(addon);
       }
     }
     context.read<Restaurant>().addToCart(foods, currentSelectedAddons);
   }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -103,7 +104,7 @@ class _FoodDetailsState extends State<FoodDetails> {
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
                                 color:
-                                Theme.of(context).colorScheme.secondary)),
+                                    Theme.of(context).colorScheme.secondary)),
                         child: ListView.builder(
                           shrinkWrap: true,
                           padding: EdgeInsets.zero,
@@ -138,7 +139,7 @@ class _FoodDetailsState extends State<FoodDetails> {
                 ),
 
                 MyButton(
-                  onTap: () =>addToCart(widget.foods, widget.selectAddon),
+                  onTap: () => addToCart(widget.foods, widget.selectAddon),
                   text: "Add To Cart",
                 ),
                 const SizedBox(
@@ -168,5 +169,4 @@ class _FoodDetailsState extends State<FoodDetails> {
       ],
     );
   }
-
 }
