@@ -11,7 +11,6 @@ class SplashController extends GetxController{
 
   getTo()async{
     await Future.delayed(const Duration(seconds: 4), () {
-
       Get.offAll(() =>  const LoginOrRegister());
     });
   }
