@@ -61,6 +61,7 @@ class _PaymentState extends State<Payment> {
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,9 +109,7 @@ class _PaymentState extends State<Payment> {
                         },
                         formKey: formKey,
                       ),
-                      const SizedBox(
-                        height: 220
-                      ),
+                      const SizedBox(height: 220),
                       MyButton(onTap: userTappedPay, text: "Pay Now")
                     ],
                   ),
@@ -123,4 +122,3 @@ class _PaymentState extends State<Payment> {
     );
   }
 }
-
