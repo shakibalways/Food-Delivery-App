@@ -16,7 +16,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     SignInController controller = Get.put(SignInController());
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
