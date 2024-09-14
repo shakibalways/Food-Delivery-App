@@ -62,7 +62,6 @@ class _PaymentState extends State<Payment> {
       );
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
