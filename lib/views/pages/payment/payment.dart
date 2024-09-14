@@ -109,7 +109,7 @@ class _PaymentState extends State<Payment> {
                         formKey: formKey,
                       ),
                       const SizedBox(
-                        height: 220,
+                        height: 220
                       ),
                       MyButton(onTap: userTappedPay, text: "Pay Now")
                     ],
