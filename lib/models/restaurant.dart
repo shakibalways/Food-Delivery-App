@@ -468,7 +468,7 @@ class Restaurant extends ChangeNotifier {
     for (final cartItem in _cart) {
       receipt.writeln(
           "${cartItem.quantity} x ${cartItem.foods.name} - ${formatPrice(cartItem.foods.price)}");
-      if(cartItem.selectAddons.isNotEmpty){
+      if (cartItem.selectAddons.isNotEmpty) {
         receipt.writeln("  Add-ons: ${formatAddon(cartItem.selectAddons)}");
       }
       receipt.writeln();
@@ -478,7 +478,7 @@ class Restaurant extends ChangeNotifier {
     receipt.writeln("Total Item: ${getTotalItemCount()}");
     receipt.writeln("Total Price: ${formatPrice(getTotalPrice())}");
 
-   return receipt.toString();
+    return receipt.toString();
   }
 
 //format double value into money
