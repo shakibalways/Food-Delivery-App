@@ -30,7 +30,6 @@ class Splash extends StatelessWidget {
             ),
             const SizedBox(height: 50,),
          const CircularProgressIndicator(backgroundColor: Colors.white,),
-
           ],
         ),
       ),
