@@ -78,7 +78,7 @@ class Cart extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final cartItem = userCart[index];
                           return MyCartTitle(
-                            cartItem: cartItem,
+                            cartItem: cartItem
                           );
                         },
                       ),
