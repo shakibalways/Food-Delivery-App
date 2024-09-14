@@ -17,7 +17,6 @@ class _PaymentState extends State<Payment> {
   String cardHolderName = "";
   String cvvCode = "";
   bool showBackView = false;
-
   // user wants to pay
   void userTappedPay() {
     if (formKey.currentState!.validate()) {
