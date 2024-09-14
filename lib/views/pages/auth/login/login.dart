@@ -92,7 +92,6 @@ class Login extends StatelessWidget {
                         text: "Login",
                       ),
               ),
-
               //not a member?register now
               const SizedBox(
                 height: 25,
